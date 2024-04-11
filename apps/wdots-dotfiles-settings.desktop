@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=wdots Dotfiles Settings App
+Exec=/home/wietsedejong/dotfiles/apps/wdots_Dotfiles_Settings-x86_64.AppImage
+Icon=/home/wietsedejong/dotfiles/apps/wdots-icon.png
+Terminal=false
+Categories=Utility
