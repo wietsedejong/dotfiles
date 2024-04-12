@@ -1,4 +1,4 @@
-# Wdots Dotfiles 2.8.4
+# Wdots Dotfiles
 
 An advanced configuration of Hyprland and Qtile for Arch Linux based distributions. This package includes an installation script to install and setup the required components.
 
@@ -6,19 +6,22 @@ The wdots Dotfiles are available as
 
 - main release (Official release): [https://github.com/wietsedejong/dotfiles](https://github.com/wietsedejong/dotfiles)
 
+Based on Stephan Raabe repo's but with canges  https://gitlab.com/stephan-raabe/dotfiles
+Some changes in theming, settings and prefrances. 
+
+Todo
+
+Change q-tile for awesome-wm
+Make screenshots
+
 [TOC]
-
-# Installation
-
-The package includes an installation script that will guide you through all steps of the installation or update process.
-
-> PLEASE NOTE: Every Linux distribution and setup can be different. Therefore, I cannot guarantee that the installation will work everywhere. Installation on your own risk.
 
 ## Supported platforms
 
 The dotfiles are tested with the following Arch based distributions:
 
 - Arch Linux (recommended)
+  Preferably with the lts-kernel for stability 
 
 ## Before you start
 
@@ -59,9 +62,7 @@ Alternatively you can install with GIT.
 
 You can use the integrated update feature to update your dotfiles to the main or rolling release whenever you want.
 
-![Update](screenshots/welcome-update-dotfiles.png "Updates")
-
-Start the wdots Welcome App. You will see a notification when an update is available. You can start the update or re-installation of the wdots Dotfiles at any time.
+Start the Wdots Welcome App. You will see a notification when an update is available. You can start the update or re-installation of the wdots Dotfiles at any time.
 
 You can force a clean re-installation of the dotfiles by removing the folder ~/dotfiles before starting the installation.
 
@@ -73,7 +74,7 @@ You can use the integrated uninstallation function (wdots Dotfiles Uninstaller A
 
 Please select "Uninstall Dotfiles" from the wdots Welcome App or execute ~/dotfiles/uninstall.sh
 
-The wdots Dotfiles Uninstaller App will remove the dotfiles folder, related symbolic links and the desktop files of the wdots Apps.
+The wdots Dotfiles Uninstaller App will remove the dotfiles folder, related symbolic links and the desktop files of the Wdots Apps.
 
 The script will also try to restore old configurations back into .config if available and restored during the installation of the wdots Dotfiles.
 
@@ -81,7 +82,7 @@ The script will also try to restore old configurations back into .config if avai
 
 Qtile X11 works fine in a KVM virtual machine. The Hyprland performance is low but it's enough for testing new features.
 
-In virt-manager please make sure that 3D acceleration is enabled in Video Virtio and the Listen type is set to None in Display Spice.
+Enabled in Video Virtio and the Listen type is set to None in Display Spice.
 
 To fix the mouse issue on Hyprland, open the Hyprland settings with <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>S</kbd> and select in Environments the variation kvm.conf
 
@@ -116,17 +117,6 @@ This script will for example remove the vim and nvim folder before the installat
 
 You can find a template in .install/templates/hook.sh
 
-## Launch Hyprland from tty
-
-The suggested method to start Hyprland is from tty with the command Hyprland because login managers (display managers) are not officially supported (https://wiki.hyprland.org/Getting-Started/Master-Tutorial/#launching-hyprland)
-
-```
-# Start Hyprland
-Hyprland
-```
-
-You can install a custom tty login issue (layout) with the dotfiles installer.
-
 ## Launch Hyprland with a Display Manager
 
 I made good experiences with the Display Manager SDDM (https://github.com/sddm/sddm). Also gdm could work. 
@@ -138,7 +128,6 @@ yay -S sddm
 The dotfiles installation script will offer to deactivate the installed display manager and to activate SDDM. 
 
 The dotfiles package also includes a configuration for the SDDM theme sdd-sugar-candy (https://github.com/Kangie/sddm-sugar-candy) and a configuration to run SDDM in X11 mode to get the best compatibility.
-
 With the Hyprland settings script you can copy the current wallpaper into SDDM and use it as a background.
 
 Please check the troubleshooting section in case of issues.
@@ -146,19 +135,14 @@ Please check the troubleshooting section in case of issues.
 ## Screenlock, suspend and DPMS
 
 Hypridle will start Hyprlock after 10 minutes of inactivity and will try to suspend one minutes later.
-
 In the wdots Dotfiles Settings App you can define the timeouts for Hyprlock, suspend and DPSM.
-
 The selected hypridle configuration can be restored from the wdots installer during a dotfiles update.
-
 The wdots Dotfiles are using the recommended configuration from https://wiki.hyprland.org/Hypr-Ecosystem/hypridle/
 
 # Some important key bindings
 
 - <kbd>SUPER</kbd> + <kbd>RETURN</kbd>: Alacritty
-- <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>RETURN</kbd>: rofi application launcher
-- <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>W</kbd>: Change wallpaper
-- <kbd>SUPER</kbd> + <kbd>PRINT</kbd>: Screenshot
+- <kbd>SUPER</kbd> + <kbd>SPACE</kbd>: rofi application launcher
 - <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Q</kbd>: Logout screen
 - <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>S</kbd>: Settings script on Hyprland
 - <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd>: Reload waybar on Hyprland
@@ -170,56 +154,19 @@ All keybindings for Hyprland with right mouse click on Apps in waybar or here:
 
 # Hyprland
 
-<a href="https://github.com/wietsedejong/dotfiles/-/blob/main/screenshots/v284/screenshot-284-1.png?ref_type=heads" target="_blank"><img src="screenshots/v284/screenshot-284-1.png" /></a>
-
-<a href="https://github.com/wietsedejong/dotfiles/-/blob/main/screenshots/v28/screenshot-28-2.png?ref_type=heads" target="_blank"><img src="screenshots/v28/screenshot-28-2.png" /></a>
-
-<a href="https://github.com/wietsedejong/dotfiles/-/blob/main/screenshots/v28/screenshot-28-3.png?ref_type=heads" target="_blank"><img src="screenshots/v28/screenshot-28-3.png" /></a>
-
-<b><a href="https://github.com/wietsedejong/dotfiles/-/tree/main/screenshots?ref_type=heads">You can find more screenshots here.</a></b>
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank">Watch on YouTube</a>
-
-## wdots Welcome App
+## Wdots Welcome App
 
 After starting the wdots dotfiles for the first time, the wdots Welcome App opens. This app is the starting point to discover the Hyprland setup.
 
-<img src="screenshots/screenshot-welcome.app.png" />
-
 The welcome screen includes the most important keybindings to open a terminal or a browser.
 
-You can start the wdots Welcome App by clicking on the L icon on the right side in waybar, using the rofi application launcher or by typing wdots in your terminal (if you're using the .bashrc from the dotfiles).
-
-In the Settings Menu you can access the following functions:
-
-- Update Wallpaper: Opens the wallpaper selector
-- Change Waybar Theme: Opens the waybar theme switcher and gives access to the available themes for the waybar status bar
-- Change GTK Theme: Opens nwg-look to select the theme for GTK 3 applications incl. widgets, icons and cursors
-- Refresh GTK Settings: Reloads the Hyprland GTK configuration (required when changing the mouse cursor)
-- Hyprland Settings: Opens the Hyprland Settings script to customize the look and feel, environment variables, monitor resolution, etc.
-- Network Settings: Select your network configuration incl. WiFi
-- Update your System: Starts the terminal application to update your Arch packages (pacman & yay)
-- Cleanup your System: Removes old orphans and cached files generated during previous installations
-- Reload Waybar: Reloads the waybar
-- Toggle Waybar: You can hide or show waybar when you want to try our other status bars.
-
-You can find the sourcecode of the wdots Welcome App in this repository:
-https://github.com/wietsedejong/wdots-welcome
+You can start the wdots Welcome App by clicking on the W icon on the right side in waybar, using the rofi application launcher or by typing wdots in your terminal (if you're using the .bashrc from the dotfiles).
 
 ## wdots Dotfiles Settings App
 
 You can open the wdots dotfiles settings app with <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>S</kbd> to change selected dotfiles configurations and choose from variations for your hyprland.conf to customize your desktop even more.
 
-<img src="screenshots/screenshot-dotfiles-settings-app.png" />
-
 You can create custom variations by copying a file from the ~/dotfiles/hypr/conf subfolders like monitor/default.conf, give the file a custom name (e.g., mymonitor.conf) and select the variation in the dotfiles settings app in the corresponding section.
-
-> The wdots Dotfiles Settings App replaces strings from several configuration files directly or based on replacement comments e.g., // START WORKSPACES That's why you shouldn't remove any of theses comments or markers to ensure full functionality of the app.
-
-You can also edit the file custom.conf which is included at the bottom of the hyprland.conf and can hold you personal configurations.
-
-You can find the sourcecode of the wdots Dotfiles Settings App in this repository:
-https://github.com/wietsedejong/wdots-dotfiles-settings
 
 ## Hyprland Configuration Variations
 
@@ -267,9 +214,9 @@ https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
 - Icons: Font Awesome
 - Launch Menus: Rofi (Wayland fork)
 - Colorscheme: pywal
-- Browsers: firefox (brave optional)
+- Browsers: firefox (waterfox and thorium optional)
 - Filemanager: Thunar
-- Cursor: Bibata Modern Ice
+- Cursor: Adwaita
 - Icons: Papirus-Icon-Theme
 - Status Bar: waybar
 - Screenshots: grim & slurp
@@ -277,12 +224,6 @@ https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
 - Logout: wlogout 
 - Idle Manager: hypridle
 - Screenlock: hyprlock
-
-# Qtile X11
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank"><img src="screenshots/v27/screenshot-27-3.png" alt="Click to watch on YouTube" /></a>
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank"><img src="screenshots/v27/screenshot-27-4.png" alt="Click to watch on YouTube" /></a>
 
 ## Wallpaper and Pywal
 
@@ -370,12 +311,9 @@ cd dotfiles
 ./install.sh
 
 ```
-
-# Base Hyprland installation with Hyperland Starter Package
-
-If you want to install only the core packages of Hyprland as a starting point for your Hyprland experiments please also try my Hyprland Starter script: https://github.com/wietsedejong/hyprland-starter
-
 # Troubleshooting
+
+Youre one your own..
 
 ## Wallpaper issues (grey or distroyed image) with latest swww 0.9.1
 
@@ -453,7 +391,7 @@ sudo pacman -R xdg-desktop-portal-gtk
 
 # Wallpaper repository
 
-You can find my wallpaper collection in the repository https://github.com/wietsedejong/wallpaper
+You can find my wallpaper collection in the repository https://github.com/wietsedejong/Wallpapers
 
 # Special Thanks
 

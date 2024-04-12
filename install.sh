@@ -5,7 +5,7 @@ source .install/includes/library.sh
 clear
 
 # Set installation mode
-mode="dev"
+mode="main"
 if [ ! -z $1 ]; then
     mode="dev"
     echo "IMPORTANT: DEV MODE ACTIVATED. "
@@ -20,7 +20,7 @@ EOF
 echo -e "${NONE}"
 
 echo "Version: $version"
-echo "peronalized by Wietse 2024"
+echo "Peronalized by Wietse 2024"
 echo ""
 if [ -d ~/dotfiles ] ;then
     echo "A Wdots Dotfiles installation has been detected."
