@@ -51,6 +51,7 @@ packagesPacman=(
     "qalculate-gtk"
     "imagemagick"
     "guvcview"
+    "gnome-desktop"
 );
 
 packagesYay=(
@@ -59,4 +60,6 @@ packagesYay=(
     "trizen"
     "pacseek"
     "rofi-lbonn-wayland"
+    "thorium-browser-bin"
+    "waterfox" 
 );
